@@ -1,0 +1,44 @@
+#! /usr/bin/env node
+
+'use strict';
+
+process.title = 'iris';
+
+var pkg = require('../package.json');
+console.log('iris-cli v' + pkg.version);
+
+var userArgs = process.argv.slice(2);
+var action = userArgs[0];
+/*var paramsRaw = userArgs.slice(1);
+var params = {};
+
+paramsRaw.forEach(
+  function (val, index, array) {
+    var pos = val.indexOf("=");
+    if ( pos != -1 ) {
+      var name = val.substring(0, pos);
+      var value = val.substring(pos + 1);
+      params[name] = value;
+    }
+  }
+);*/
+
+switch ( action ) {
+  case 'init':
+    require('../lib/action/init').generateSkeleton();
+  break;
+  case 'path':
+    require('../lib/action/iris-path').generateIrisPath();
+  break;
+  case 'ui':
+    require('../lib/action/ui').createUI();
+  break;
+  case 'screen':
+    require('../lib/action/screen').createScreen();
+  break;
+  case 'resource':
+    require('../lib/action/resource').createResource();
+  break;
+  default:
+    console.error('Invalid action, try: iris init|path|ui|screen|resource');
+}

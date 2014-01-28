@@ -49,7 +49,7 @@ iris pack [destination]
 ```
 
 Examples:
-```bash
+```
 // Default destination folder ../dist
 iris pack
 

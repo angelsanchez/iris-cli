@@ -20,13 +20,13 @@ switch ( action ) {
     require('../lib/action/iris-path').generateIrisPath();
   break;
   case 'ui':
-    require('../lib/action/ui').createUI();
+    require('../lib/action/ui').createUI(firstParam);
   break;
   case 'screen':
-    require('../lib/action/screen').createScreen();
+    require('../lib/action/screen').createScreen(firstParam);
   break;
   case 'resource':
-    require('../lib/action/resource').createResource();
+    require('../lib/action/resource').createResource(firstParam);
   break;
   case 'pack':
     require('../lib/action/pack').pack(firstParam || '../dist');

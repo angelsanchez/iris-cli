@@ -25,6 +25,9 @@ switch ( action ) {
   case 'screen':
     require('../lib/action/screen').createScreen(firstParam);
   break;
+  case 'model':
+    require('../lib/action/model').createModel(firstParam);
+  break;
   case 'resource':
     require('../lib/action/resource').createResource(firstParam);
   break;

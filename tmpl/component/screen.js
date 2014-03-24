@@ -1,6 +1,8 @@
 iris.screen(function (self) {
+	"use strict";
 
 	// var resource = iris.resource(iris.path.resource);
+	// var model = iris.model(iris.path.model);
 
 	self.create = function() {
 		
@@ -23,4 +25,4 @@ iris.screen(function (self) {
 		
 	// };
 
-},iris.path.screen.{{component}}.js);
+}, iris.path.screen.{{component}}.js);

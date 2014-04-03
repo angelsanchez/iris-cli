@@ -1,28 +1,29 @@
 iris.resource(function (self) {
-    "use strict";
+	"use strict";
 
 	self.settings({
 		type : 'json',
 		path: '{{component}}/'
 	});
 
+	// called automatically
 	// self.create = function() {
 	// };
 
-    self.load = function (id) {
-        return self.get(id);
-    };
+	self.new = function (params) {
+		return self.post("", params);
+	};
 
-    self.create = function (params) {
-        return self.post("", params);
-    };
+	self.load = function (id) {
+		return self.get(id);
+	};
 
-    self.update = function (id, params) {
-        return self.put(id, params);
-    };
+	self.update = function (id, params) {
+		return self.put(id, params);
+	};
 
-    self.remove = function (id) {
-        return self.del(id);
-    };
+	self.remove = function (id) {
+		return self.del(id);
+	};
 
-}, iris.path.{{component}}.js);
+}, iris.path.resource.{{component}}.js);

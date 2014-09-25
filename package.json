@@ -1,6 +1,6 @@
 {
   "name": "iris-cli",
-  "version": "0.2.3",
+  "version": "0.2.4-SNAPSHOT",
   "description": "The iris command line interface.",
   "main": "lib/index.js",
   "repository": {

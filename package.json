@@ -1,6 +1,6 @@
 {
   "name": "iris-cli",
-  "version": "0.2.4",
+  "version": "0.2.5-SNAPSHOT",
   "description": "The iris command line interface.",
   "main": "lib/index.js",
   "repository": {
@@ -16,7 +16,7 @@
   "dependencies": {
     "request": "~2.33.0",
     "async": "~0.2.10",
-    "html-minifier": "~0.5.5",
+    "html-minifier": "~0.6.8",
     "uglify-js": "~2.4.12",
     "mkdirp": "~0.3.5"
   }
